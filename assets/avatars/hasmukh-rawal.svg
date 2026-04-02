@@ -1,0 +1,21 @@
+<svg width="720" height="760" viewBox="0 0 720 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="720" height="760" rx="48" fill="#07223A"/>
+  <circle cx="562" cy="146" r="150" fill="#23B9BE" fill-opacity="0.18"/>
+  <circle cx="158" cy="638" r="180" fill="#0A547A" fill-opacity="0.2"/>
+  <rect x="58" y="58" width="604" height="644" rx="44" fill="url(#bg)"/>
+  <circle cx="360" cy="314" r="120" fill="#85E7FF" fill-opacity="0.15"/>
+  <circle cx="360" cy="294" r="82" fill="#F1C5A8"/>
+  <path d="M284 288C284 227.248 333.248 178 394 178C454.752 178 504 227.248 504 288V334H284V288Z" fill="#17314C"/>
+  <path d="M196 706C196 584.497 294.497 486 416 486C537.503 486 636 584.497 636 706H196Z" fill="#102843"/>
+  <path d="M332 486H386L404 544H314L332 486Z" fill="#F1C5A8"/>
+  <path d="M266 706C274 617.265 319.885 545 360 545C400.115 545 446 617.265 454 706H266Z" fill="#EEF8FF"/>
+  <path d="M334 545H386L414 706H306L334 545Z" fill="#0E8EAE"/>
+  <rect x="88" y="88" width="124" height="124" rx="32" fill="white" fill-opacity="0.12"/>
+  <text x="118" y="165" fill="#E2F8FF" font-family="Arial, sans-serif" font-size="50" font-weight="700">HR</text>
+  <defs>
+    <linearGradient id="bg" x1="90" y1="86" x2="632" y2="706" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0C3A60"/>
+      <stop offset="1" stop-color="#0B6286"/>
+    </linearGradient>
+  </defs>
+</svg>

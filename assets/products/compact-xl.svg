@@ -1,0 +1,35 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1000" rx="72" fill="#061F37"/>
+  <rect width="1600" height="1000" rx="72" fill="url(#bg)"/>
+  <circle cx="1346" cy="160" r="208" fill="#6ED7FF" fill-opacity="0.2"/>
+  <circle cx="224" cy="808" r="210" fill="#1FB1BA" fill-opacity="0.16"/>
+  <rect x="118" y="122" width="390" height="86" rx="43" fill="white" fill-opacity="0.12"/>
+  <text x="156" y="176" fill="#D9F6FF" font-family="Arial, sans-serif" font-size="34" font-weight="700" letter-spacing="4">INSTRUMENTATION</text>
+  <text x="118" y="332" fill="white" font-family="Arial, sans-serif" font-size="94" font-weight="700">Compact XL</text>
+  <text x="118" y="414" fill="#D7EEF8" font-family="Arial, sans-serif" font-size="36">Compact molecular system</text>
+  <text x="118" y="464" fill="#D7EEF8" font-family="Arial, sans-serif" font-size="32">Built for cleaner lab deployment and simplified workflows.</text>
+  <g>
+    <rect x="956" y="212" width="372" height="482" rx="56" fill="#F6FCFF"/>
+    <rect x="1006" y="262" width="274" height="172" rx="28" fill="#DDF4FF"/>
+    <rect x="1040" y="292" width="206" height="110" rx="22" fill="#0A5B82"/>
+    <rect x="1018" y="486" width="112" height="116" rx="24" fill="#EDF8FF"/>
+    <rect x="1154" y="486" width="112" height="116" rx="24" fill="#EDF8FF"/>
+    <circle cx="1074" cy="544" r="18" fill="#22B5B2"/>
+    <circle cx="1210" cy="544" r="18" fill="#0079A8"/>
+    <rect x="1060" y="734" width="164" height="24" rx="12" fill="#8ADFFF"/>
+  </g>
+  <g opacity="0.75">
+    <path d="M782 274C850 274 900 324 900 392" stroke="#85E5FF" stroke-width="8" stroke-linecap="round"/>
+    <path d="M752 334C796 334 828 366 828 410" stroke="#85E5FF" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="728" cy="350" r="14" fill="#85E5FF"/>
+    <circle cx="876" cy="392" r="14" fill="#85E5FF"/>
+  </g>
+  <rect x="118" y="670" width="472" height="120" rx="30" fill="white" fill-opacity="0.1"/>
+  <text x="154" y="736" fill="white" font-family="Arial, sans-serif" font-size="32" font-weight="700">Fast setup + compact footprint</text>
+  <defs>
+    <linearGradient id="bg" x1="80" y1="26" x2="1510" y2="944" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#092C4A"/>
+      <stop offset="1" stop-color="#0B6289"/>
+    </linearGradient>
+  </defs>
+</svg>

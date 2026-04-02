@@ -1,0 +1,21 @@
+<svg width="720" height="760" viewBox="0 0 720 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="720" height="760" rx="48" fill="#082947"/>
+  <circle cx="560" cy="148" r="150" fill="#25B7C6" fill-opacity="0.16"/>
+  <circle cx="160" cy="640" r="182" fill="#0A4F75" fill-opacity="0.18"/>
+  <rect x="58" y="58" width="604" height="644" rx="44" fill="url(#bg)"/>
+  <circle cx="360" cy="314" r="120" fill="#8AEAFF" fill-opacity="0.15"/>
+  <circle cx="360" cy="294" r="82" fill="#F0C6AA"/>
+  <path d="M284 288C284 227.248 333.248 178 394 178C454.752 178 504 227.248 504 288V334H284V288Z" fill="#17314C"/>
+  <path d="M194 706C194 584.497 292.497 486 414 486C535.503 486 634 584.497 634 706H194Z" fill="#102843"/>
+  <path d="M332 486H386L404 544H314L332 486Z" fill="#F0C6AA"/>
+  <path d="M264 706C272 617.265 318.78 545 360 545C401.22 545 448 617.265 456 706H264Z" fill="#EEF8FF"/>
+  <path d="M334 545H386L414 706H306L334 545Z" fill="#1598A8"/>
+  <rect x="88" y="88" width="124" height="124" rx="32" fill="white" fill-opacity="0.12"/>
+  <text x="110" y="165" fill="#DDF8FF" font-family="Arial, sans-serif" font-size="50" font-weight="700">GW</text>
+  <defs>
+    <linearGradient id="bg" x1="90" y1="86" x2="632" y2="706" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0C3D62"/>
+      <stop offset="1" stop-color="#0A6780"/>
+    </linearGradient>
+  </defs>
+</svg>

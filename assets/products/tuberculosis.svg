@@ -1,0 +1,28 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1000" rx="72" fill="#082947"/>
+  <rect width="1600" height="1000" rx="72" fill="url(#bg)"/>
+  <circle cx="1338" cy="156" r="212" fill="#23B7C5" fill-opacity="0.18"/>
+  <circle cx="186" cy="824" r="222" fill="#0D587F" fill-opacity="0.22"/>
+  <rect x="118" y="122" width="332" height="86" rx="43" fill="white" fill-opacity="0.12"/>
+  <text x="154" y="176" fill="#DDF6FF" font-family="Arial, sans-serif" font-size="34" font-weight="700" letter-spacing="4">TB PROGRAM</text>
+  <text x="118" y="332" fill="white" font-family="Arial, sans-serif" font-size="94" font-weight="700">Tuberculosis</text>
+  <text x="118" y="414" fill="#D9EEF8" font-family="Arial, sans-serif" font-size="36">National screening ready</text>
+  <text x="118" y="464" fill="#D9EEF8" font-family="Arial, sans-serif" font-size="32">Built for program scale, faster reach, and last-mile diagnostics access.</text>
+  <g opacity="0.92">
+    <rect x="972" y="220" width="394" height="498" rx="56" fill="white" fill-opacity="0.12" stroke="white" stroke-opacity="0.14" stroke-width="4"/>
+    <circle cx="1166" cy="468" r="114" fill="#7FE5FF" fill-opacity="0.14"/>
+    <path d="M1116 382C1116 349.967 1141.97 324 1174 324C1206.03 324 1232 349.967 1232 382V430C1232 454.28 1225.03 478.047 1211.94 498.473L1174 558L1136.06 498.473C1122.97 478.047 1116 454.28 1116 430V382Z" fill="#9EE6FF"/>
+    <path d="M1098 418C1058.8 418 1027 449.804 1027 489V578H1098V418Z" fill="#BFEFFF" fill-opacity="0.9"/>
+    <path d="M1250 418C1289.2 418 1321 449.804 1321 489V578H1250V418Z" fill="#BFEFFF" fill-opacity="0.9"/>
+    <path d="M1104 606H1244" stroke="#E8FAFF" stroke-width="22" stroke-linecap="round"/>
+    <path d="M1076 654H1272" stroke="#7FE5FF" stroke-width="16" stroke-linecap="round"/>
+  </g>
+  <rect x="118" y="670" width="460" height="120" rx="30" fill="white" fill-opacity="0.1"/>
+  <text x="154" y="736" fill="white" font-family="Arial, sans-serif" font-size="32" font-weight="700">Population programs + rapid deployment</text>
+  <defs>
+    <linearGradient id="bg" x1="76" y1="32" x2="1518" y2="944" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B2F4E"/>
+      <stop offset="1" stop-color="#0A6185"/>
+    </linearGradient>
+  </defs>
+</svg>

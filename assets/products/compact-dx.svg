@@ -1,0 +1,38 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1000" rx="72" fill="#071F36"/>
+  <rect width="1600" height="1000" rx="72" fill="url(#bg)"/>
+  <circle cx="1352" cy="170" r="214" fill="#23BAB6" fill-opacity="0.2"/>
+  <circle cx="200" cy="828" r="228" fill="#79D7FF" fill-opacity="0.16"/>
+  <rect x="118" y="122" width="390" height="86" rx="43" fill="white" fill-opacity="0.12"/>
+  <text x="156" y="176" fill="#DDF6FF" font-family="Arial, sans-serif" font-size="34" font-weight="700" letter-spacing="4">INSTRUMENTATION</text>
+  <text x="118" y="332" fill="white" font-family="Arial, sans-serif" font-size="94" font-weight="700">Compact DX</text>
+  <text x="118" y="414" fill="#D8EEF8" font-family="Arial, sans-serif" font-size="36">Sample-to-result automation</text>
+  <text x="118" y="464" fill="#D8EEF8" font-family="Arial, sans-serif" font-size="32">RT-PCR workflow readiness with streamlined throughput.</text>
+  <g>
+    <rect x="934" y="188" width="402" height="510" rx="56" fill="#F7FCFF"/>
+    <rect x="1004" y="248" width="262" height="150" rx="24" fill="#0A527A"/>
+    <rect x="1044" y="286" width="182" height="74" rx="18" fill="#DDF5FF"/>
+    <rect x="992" y="450" width="126" height="148" rx="26" fill="#EDF8FF"/>
+    <rect x="1146" y="450" width="148" height="148" rx="26" fill="#EDF8FF"/>
+    <circle cx="1054" cy="526" r="18" fill="#22B5B2"/>
+    <circle cx="1218" cy="526" r="20" fill="#0079A8"/>
+    <circle cx="1262" cy="526" r="10" fill="#73D2FF"/>
+    <rect x="1056" y="726" width="160" height="24" rx="12" fill="#96E3FF"/>
+  </g>
+  <g opacity="0.72">
+    <rect x="760" y="270" width="96" height="52" rx="18" fill="#A0E8FF" fill-opacity="0.28"/>
+    <rect x="760" y="356" width="144" height="52" rx="18" fill="#A0E8FF" fill-opacity="0.2"/>
+    <rect x="760" y="442" width="116" height="52" rx="18" fill="#A0E8FF" fill-opacity="0.16"/>
+    <path d="M842 296H936" stroke="#A0E8FF" stroke-width="5" stroke-linecap="round"/>
+    <path d="M900 382H976" stroke="#A0E8FF" stroke-width="5" stroke-linecap="round"/>
+    <path d="M874 468H944" stroke="#A0E8FF" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <rect x="118" y="670" width="472" height="120" rx="30" fill="white" fill-opacity="0.1"/>
+  <text x="154" y="736" fill="white" font-family="Arial, sans-serif" font-size="32" font-weight="700">Automation + high-throughput testing</text>
+  <defs>
+    <linearGradient id="bg" x1="72" y1="48" x2="1528" y2="950" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#092A48"/>
+      <stop offset="1" stop-color="#0A6488"/>
+    </linearGradient>
+  </defs>
+</svg>

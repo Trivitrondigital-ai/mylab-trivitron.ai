@@ -1,0 +1,22 @@
+<svg width="720" height="760" viewBox="0 0 720 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="720" height="760" rx="48" fill="#082947"/>
+  <circle cx="560" cy="146" r="150" fill="#6FD7FF" fill-opacity="0.18"/>
+  <circle cx="160" cy="640" r="184" fill="#0B5277" fill-opacity="0.18"/>
+  <rect x="58" y="58" width="604" height="644" rx="44" fill="url(#bg)"/>
+  <circle cx="360" cy="314" r="120" fill="#7FE5FF" fill-opacity="0.16"/>
+  <circle cx="360" cy="294" r="82" fill="#F3CBB1"/>
+  <path d="M280 294C280 228.83 332.83 176 398 176C463.17 176 516 228.83 516 294V350H280V294Z" fill="#17314C"/>
+  <path d="M258 230C292 194.667 334 177 386 177C435.333 177 477 196.667 510 236V274H258V230Z" fill="#112A43"/>
+  <path d="M186 706C186 581.735 286.735 481 411 481C535.265 481 636 581.735 636 706H186Z" fill="#112843"/>
+  <path d="M332 482H386L404 542H314L332 482Z" fill="#F3CBB1"/>
+  <path d="M258 706C268 613.194 312.646 538 360 538C407.354 538 452 613.194 462 706H258Z" fill="#EEF8FF"/>
+  <path d="M332 538H388L414 706H306L332 538Z" fill="#1AA6B0"/>
+  <rect x="88" y="88" width="124" height="124" rx="32" fill="white" fill-opacity="0.12"/>
+  <text x="118" y="165" fill="#E6FAFF" font-family="Arial, sans-serif" font-size="52" font-weight="700">CM</text>
+  <defs>
+    <linearGradient id="bg" x1="90" y1="86" x2="630" y2="706" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0C3F63"/>
+      <stop offset="1" stop-color="#0A6680"/>
+    </linearGradient>
+  </defs>
+</svg>
