@@ -188,13 +188,15 @@ button {
 
 .site-nav__links {
   margin-left: auto;
-  gap: 1.2rem;
+  gap: 0.95rem;
+  flex-wrap: nowrap;
 }
 
 .site-nav__links a {
-  font-size: 0.94rem;
+  font-size: 0.9rem;
   font-weight: 700;
   letter-spacing: -0.02em;
+  white-space: nowrap;
 }
 
 .site-nav__links a:hover,
@@ -1151,7 +1153,7 @@ button {
 
   .site-nav__links {
     margin-left: auto;
-    gap: 1rem;
+    gap: 0.75rem;
   }
 
   .case-panel,

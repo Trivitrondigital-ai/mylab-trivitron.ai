@@ -96,6 +96,26 @@ const setShowcaseState = (index) => {
   });
 };
 
+const updateShowcaseHeight = () => {
+  if (!showcase || !showcaseCards.length) {
+    return;
+  }
+
+  const topOffset = 82;
+  const compactViewport = window.matchMedia("(max-width: 860px)").matches;
+  const extraSpace = compactViewport ? 140 : 40;
+  const tallestCard = showcaseCards.reduce((maxHeight, card) => {
+    return Math.max(maxHeight, card.offsetHeight);
+  }, 0);
+
+  const targetHeight = Math.max(
+    compactViewport ? 680 : 520,
+    Math.ceil(topOffset + tallestCard + extraSpace)
+  );
+
+  showcase.style.minHeight = `${targetHeight}px`;
+};
+
 const restartShowcaseTimer = () => {
   if (!showcaseCards.length || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
     return;
@@ -309,15 +329,18 @@ const init = () => {
 
   if (showcaseCards.length) {
     setShowcaseState(0);
+    updateShowcaseHeight();
     restartShowcaseTimer();
 
     prevShowcase?.addEventListener("click", () => {
       setShowcaseState(showcaseIndex - 1);
+      updateShowcaseHeight();
       restartShowcaseTimer();
     });
 
     nextShowcase?.addEventListener("click", () => {
       setShowcaseState(showcaseIndex + 1);
+      updateShowcaseHeight();
       restartShowcaseTimer();
     });
 
@@ -330,6 +353,17 @@ const init = () => {
     showcaseTrack?.addEventListener("touchstart", handleShowcaseTouchStart, { passive: true });
     showcaseTrack?.addEventListener("touchmove", handleShowcaseTouchMove, { passive: true });
     showcaseTrack?.addEventListener("touchend", handleShowcaseTouchEnd, { passive: true });
+
+    showcaseCards.forEach((card) => {
+      card.querySelectorAll("img").forEach((image) => {
+        if (!image.complete) {
+          image.addEventListener("load", updateShowcaseHeight, { once: true });
+        }
+      });
+    });
+
+    window.addEventListener("resize", updateShowcaseHeight, { passive: true });
+    window.addEventListener("load", updateShowcaseHeight, { once: true });
   }
 
   setupRevealAnimations();
