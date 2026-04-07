@@ -43,10 +43,14 @@
           <div class="site-nav__links">
             <a href="#top">Home</a>
             <a href="#products">Products</a>
-            <a href="#differentiators">Key Differentiators</a>
-            <a href="#partnership">Partnership</a>
-            <a href="#vision">Vision &amp; Mission</a>
-            <a href="#leadership">Leadership</a>
+            <div class="nav-dropdown" role="group" aria-label="About us">
+              <a class="nav-dropdown__trigger" href="#partnership" aria-haspopup="true">About Us</a>
+              <div class="nav-dropdown__menu" role="menu" aria-label="About us sections">
+                <a role="menuitem" href="#partnership">Partnership</a>
+                <a role="menuitem" href="#vision">Vision &amp; Mission</a>
+                <a role="menuitem" href="#leadership">Leadership</a>
+              </div>
+            </div>
             <a href="#contact">Contact Us</a>
           </div>
         </nav>
@@ -185,7 +189,7 @@
                 </a>
               </div>
               <div class="case-panel__visual">
-                <img src="assets/website images/Blood Screening_nat-feature-kit.png" alt="Blood screening kit visual" width="514" height="388" decoding="async">
+                <img class="case-panel__image--feature" src="assets/website images/Blood-Screening-Banner.jpg" alt="Blood screening kit visual" width="514" height="388" decoding="async">
                 <div class="case-panel__stats">
                   <span>Blood safety</span>
                   <span>Clinical screening</span>
