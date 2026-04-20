@@ -1293,8 +1293,11 @@ button {
 }
 
 .leadership-card {
+  --leadership-card-image-size: 280px;
+  --leadership-card-portrait-height: calc(var(--leadership-card-image-size) + 2rem);
   display: flex;
   flex-direction: column;
+  height: 100%;
   min-width: 0;
   min-height: 100%;
   overflow: hidden;
@@ -1305,20 +1308,24 @@ button {
 }
 
 .leadership-card__portrait {
-  display: grid;
-  place-items: center;
-  min-height: 250px;
+  display: flex;
+  flex: 0 0 var(--leadership-card-portrait-height);
+  align-items: center;
+  justify-content: center;
+  height: var(--leadership-card-portrait-height);
+  min-height: var(--leadership-card-portrait-height);
   padding: 1rem;
   background:
     linear-gradient(180deg, rgba(248, 252, 253, 0.98), rgba(228, 244, 247, 0.92));
 }
 
 .leadership-card__portrait img {
-  width: min(100%, 280px);
-  height: 280px;
+  display: block;
+  width: min(100%, var(--leadership-card-image-size));
+  height: min(100%, var(--leadership-card-image-size));
   padding: 0.35rem;
-  object-fit: contain;
-  object-position: center top;
+  object-fit: cover;
+  object-position: center;
   border-radius: 22px;
   background: rgba(255, 255, 255, 0.82);
   box-shadow:
@@ -1330,6 +1337,7 @@ button {
   display: flex;
   flex: 1 1 auto;
   flex-direction: column;
+  justify-content: flex-start;
   min-width: 0;
   padding: 1.25rem 1.35rem 1.45rem;
 }
@@ -1384,12 +1392,7 @@ button {
 }
 
 .leadership-card--compact .leadership-card__portrait {
-  min-height: 300px;
-}
-
-.leadership-card--compact .leadership-card__portrait img {
-  width: min(100%, 300px);
-  height: 300px;
+  --leadership-card-image-size: 300px;
 }
 
 .leadership-hero {
@@ -1474,6 +1477,7 @@ button {
 
 #leadership-council .leadership-carousel__track {
   display: flex;
+  align-items: stretch;
   gap: var(--leadership-carousel-gap);
   transition: transform 520ms cubic-bezier(0.22, 0.61, 0.36, 1);
   transform: translate3d(0, 0, 0);
@@ -1492,20 +1496,16 @@ button {
 }
 
 #leadership-council .leadership-card {
+  --leadership-card-image-size: 250px;
   min-height: 100%;
 }
 
 #leadership-council .leadership-card__portrait,
 #leadership-council .leadership-card--featured .leadership-card__portrait,
 #leadership-council .leadership-card--compact .leadership-card__portrait {
-  min-height: 260px;
-}
-
-#leadership-council .leadership-card__portrait img,
-#leadership-council .leadership-card--featured .leadership-card__portrait img,
-#leadership-council .leadership-card--compact .leadership-card__portrait img {
-  width: min(100%, 250px);
-  height: 250px;
+  --leadership-card-image-size: 250px;
+  height: var(--leadership-card-portrait-height);
+  min-height: var(--leadership-card-portrait-height);
 }
 
 #leadership-council .leadership-card__body,
@@ -1568,12 +1568,7 @@ button {
 }
 
 .leadership-card--featured .leadership-card__portrait {
-  min-height: 360px;
-}
-
-.leadership-card--featured .leadership-card__portrait img {
-  width: min(100%, 330px);
-  height: 330px;
+  --leadership-card-image-size: 330px;
 }
 
 .leadership-card--featured .leadership-card__body {
@@ -2170,7 +2165,7 @@ button {
   }
 
   .leadership-card--featured .leadership-card__portrait {
-    min-height: 300px;
+    --leadership-card-image-size: 268px;
   }
 
   #leadership-council {
@@ -2504,14 +2499,14 @@ button {
   .leadership-card__portrait,
   .leadership-card--compact .leadership-card__portrait,
   .leadership-card--featured .leadership-card__portrait {
-    min-height: 250px;
+    --leadership-card-image-size: min(62vw, 250px);
+    height: var(--leadership-card-portrait-height);
+    min-height: var(--leadership-card-portrait-height);
   }
 
   .leadership-card__portrait img,
   .leadership-card--compact .leadership-card__portrait img,
   .leadership-card--featured .leadership-card__portrait img {
-    width: min(100%, 250px);
-    height: min(62vw, 250px);
     border-radius: 20px;
   }
 
@@ -2546,14 +2541,9 @@ button {
   #leadership-council .leadership-card__portrait,
   #leadership-council .leadership-card--compact .leadership-card__portrait,
   #leadership-council .leadership-card--featured .leadership-card__portrait {
-    min-height: 240px;
-  }
-
-  #leadership-council .leadership-card__portrait img,
-  #leadership-council .leadership-card--compact .leadership-card__portrait img,
-  #leadership-council .leadership-card--featured .leadership-card__portrait img {
-    width: min(100%, 230px);
-    height: min(56vw, 230px);
+    --leadership-card-image-size: min(56vw, 230px);
+    height: var(--leadership-card-portrait-height);
+    min-height: var(--leadership-card-portrait-height);
   }
 
   .leadership-alignment {
