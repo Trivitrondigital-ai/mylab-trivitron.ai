@@ -1460,6 +1460,7 @@ button {
 #leadership-council {
   --leadership-cards-visible: 4;
   --leadership-carousel-gap: 1rem;
+  --leadership-carousel-card-height: 600px;
 }
 
 #leadership-council .leadership-carousel {
@@ -1492,7 +1493,9 @@ button {
 
 #leadership-council .leadership-carousel__track .leadership-card {
   flex: 0 0 calc((100% - (var(--leadership-cards-visible) - 1) * var(--leadership-carousel-gap)) / var(--leadership-cards-visible));
+  height: var(--leadership-carousel-card-height);
   min-width: 0;
+  min-height: var(--leadership-carousel-card-height);
 }
 
 #leadership-council .leadership-card {
@@ -2170,6 +2173,7 @@ button {
 
   #leadership-council {
     --leadership-cards-visible: 3;
+    --leadership-carousel-card-height: 560px;
   }
 }
 
@@ -2366,6 +2370,7 @@ button {
 
   #leadership-council {
     --leadership-cards-visible: 2;
+    --leadership-carousel-card-height: 560px;
   }
 }
 
@@ -2517,6 +2522,7 @@ button {
 
   #leadership-council {
     --leadership-cards-visible: 1;
+    --leadership-carousel-card-height: 540px;
   }
 
   #leadership-council .leadership-carousel {
