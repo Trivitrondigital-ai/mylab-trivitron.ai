@@ -441,7 +441,7 @@
             </p>
           </div>
 
-          <div class="leadership-carousel" data-leadership-carousel data-reveal>
+          <div class="leadership-carousel" data-home-leadership-carousel data-reveal>
             <button
               class="leadership-carousel__arrow leadership-carousel__arrow--prev"
               type="button"
@@ -500,21 +500,6 @@
 
                 <article class="leadership-card">
                   <div class="leadership-card__portrait">
-                    <img src="assets/avatars/lead-gautam-wankhede.png" alt="Gautam Wankhade portrait" loading="lazy" decoding="async">
-                  </div>
-                  <div class="leadership-card__body">
-                    <span class="leadership-card__eyebrow">Mylab Discovery Solutions</span>
-                    <h3>Gautam Wankhade</h3>
-                    <p class="leadership-card__meta">Director</p>
-                    <p class="leadership-card__text">
-                      Supports capability building, market-facing positioning, and platform narrative
-                      development with confidence.
-                    </p>
-                  </div>
-                </article>
-
-                <article class="leadership-card">
-                  <div class="leadership-card__portrait">
                     <img src="assets/avatars/lead-rahul-patil.png" alt="Rahul Patil portrait" loading="lazy" decoding="async">
                   </div>
                   <div class="leadership-card__body">
@@ -539,6 +524,21 @@
                     <p class="leadership-card__text">
                       Connects product strategy with market context so the full platform story feels
                       sharper, calmer, and more intentional.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="leadership-card">
+                  <div class="leadership-card__portrait">
+                    <img src="assets/avatars/lead-gautam-wankhede.png" alt="Gautam Wankhade portrait" loading="lazy" decoding="async">
+                  </div>
+                  <div class="leadership-card__body">
+                    <span class="leadership-card__eyebrow">Mylab Discovery Solutions</span>
+                    <h3>Gautam Wankhade</h3>
+                    <p class="leadership-card__meta">Director</p>
+                    <p class="leadership-card__text">
+                      Supports capability building, market-facing positioning, and platform narrative
+                      development with confidence.
                     </p>
                   </div>
                 </article>
@@ -729,5 +729,138 @@
   </div>
 
   <script src="script.js"></script>
+  <script>
+    (() => {
+      const carousel = document.querySelector("[data-home-leadership-carousel]");
+
+      if (!carousel) {
+        return;
+      }
+
+      const section = document.getElementById("leadership-council");
+      const track = carousel.querySelector("[data-carousel-track]");
+      const prevButton = carousel.querySelector("[data-carousel-prev]");
+      const nextButton = carousel.querySelector("[data-carousel-next]");
+      const cards = Array.from(track?.children || []);
+
+      if (!section || !track || cards.length === 0 || !prevButton || !nextButton) {
+        return;
+      }
+
+      let currentIndex = 0;
+      let visibleCards = 4;
+      let stepSize = 0;
+      let maxIndex = 0;
+      let isAnimating = false;
+
+      const getVisibleCards = () => {
+        if (window.innerWidth <= 640) {
+          return 1;
+        }
+
+        if (window.innerWidth <= 860) {
+          return 2;
+        }
+
+        if (window.innerWidth <= 980) {
+          return 3;
+        }
+
+        return 4;
+      };
+
+      const getStepSize = () => {
+        const firstCard = cards[0];
+
+        if (!firstCard) {
+          return 0;
+        }
+
+        const cardWidth = firstCard.getBoundingClientRect().width;
+        const computed = window.getComputedStyle(track);
+        const gap = parseFloat(computed.columnGap || computed.gap || "0") || 0;
+
+        return cardWidth + gap;
+      };
+
+      const updateButtons = () => {
+        const disableArrows = cards.length <= visibleCards;
+
+        prevButton.disabled = disableArrows || currentIndex === 0;
+        nextButton.disabled = disableArrows;
+      };
+
+      const applyTrackTransform = (animated) => {
+        if (animated) {
+          track.classList.remove("is-jump-reset");
+        } else {
+          track.classList.add("is-jump-reset");
+        }
+
+        const offset = currentIndex * stepSize;
+        track.style.transform = `translate3d(${-offset}px, 0, 0)`;
+
+        if (!animated) {
+          window.requestAnimationFrame(() => {
+            window.requestAnimationFrame(() => {
+              track.classList.remove("is-jump-reset");
+            });
+          });
+        }
+      };
+
+      const rebuildCarousel = () => {
+        visibleCards = Math.min(getVisibleCards(), cards.length);
+        maxIndex = Math.max(0, cards.length - visibleCards);
+        currentIndex = Math.min(currentIndex, maxIndex);
+
+        section.style.setProperty("--leadership-cards-visible", String(visibleCards));
+        cards.forEach((card) => {
+          card.hidden = false;
+          card.setAttribute("aria-hidden", "false");
+        });
+
+        stepSize = getStepSize();
+        updateButtons();
+        applyTrackTransform(false);
+      };
+
+      prevButton.addEventListener("click", () => {
+        if (isAnimating || cards.length <= visibleCards) {
+          return;
+        }
+
+        currentIndex = currentIndex === 0 ? maxIndex : currentIndex - 1;
+        isAnimating = true;
+        applyTrackTransform(true);
+      });
+
+      nextButton.addEventListener("click", () => {
+        if (isAnimating || cards.length <= visibleCards) {
+          return;
+        }
+
+        currentIndex = currentIndex >= maxIndex ? 0 : currentIndex + 1;
+        isAnimating = true;
+        applyTrackTransform(true);
+      });
+
+      track.addEventListener("transitionend", (event) => {
+        if (event.propertyName !== "transform") {
+          return;
+        }
+
+        isAnimating = false;
+        updateButtons();
+      });
+
+      window.addEventListener("resize", () => {
+        isAnimating = false;
+        rebuildCarousel();
+      }, { passive: true });
+
+      rebuildCarousel();
+    })();
+  </script>
 </body>
 </html>
